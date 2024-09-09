@@ -1,8 +1,9 @@
 function calcXp(num1, num2) {
-    let xpGanho = num1 * num2 * 100
-    return console.log ("Voce ganhou " + xpGanho + " XP!")
+    let xpGanho = num1 * num2 * 100;
+    return "Voce ganhou " + xpGanho + " XP!";
 }
 
-calcXp(15, 20)
-calcXp(41, 38)
-calcXp(45, 40)
+let num1 = parseInt(gets());
+let num2 = parseInt(gets());
+
+console.log(calcXp(num1, num2));
