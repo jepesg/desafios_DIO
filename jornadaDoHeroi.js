@@ -11,6 +11,6 @@ function simularJornada(posicaoInicial, numeroDePassos) {
 }
 
 
-simularJornada[(10, 6), (15, 3), (2, 3)];
+simularJornada (10, 6)
 //simularJornada(15, 3);
 //simularJornada(2, 3);
