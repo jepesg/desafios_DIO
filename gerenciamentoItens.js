@@ -6,26 +6,22 @@ class itemMagico {
     }
 
     calcularDano() {
-        if (this.tipo == "arco") {
-            danoTotal = this.dano * 2;
-            return this.tipo == "arco" ? this.dano * 2 : this.dano;
-        } else if (this.tipo == "cajado") {
-            danoTotal = this.dano * 2;
-            return this.tipo == "cajado" ? this.dano * 2 : this.dano;
-        } else if (this.tipo == "espada") {
-            danoTotal = this.dano * 2;
-            return this.tipo == "espada" ? this.dano * 2 : this.dano;
+        if (this.tipo === "arco" || this.tipo === "cajado" || this.tipo === "espada") {
+            return this.dano * 2;
         }
+        return this.dano;
     }
 }
 
-let itemTipo = new itemMagico(gets());
-let danoItem = new itemMagico(parseInt(gets()));
-let itemResistencia = new itemMagico(parseInt(gets()));
+const itemTipo = (gets());
+const itemDano = parseInt(gets());
+const itemResistencia = parseInt(gets());
 
-console.log(`Tipo: ${itemMagico.itemTipo}`);
-console.log(`Dano: ${itemMagico.itemDano}`);
-console.log(`Resistencia: ${itemMagico.itemResistencia}`);
+const item = new itemMagico(itemTipo, itemDano, itemResistencia);
 
-const danoTotal = itemMagico.calcularDano();
+console.log(`Tipo: ${itemTipo}`);
+console.log(`Dano: ${itemDano}`);
+console.log(`Resistência: ${itemResistencia}`);
+
+const danoTotal = item.calcularDano();
 console.log(`Dano em combate: ${danoTotal}`);
